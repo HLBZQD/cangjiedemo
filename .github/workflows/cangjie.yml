@@ -8,6 +8,6 @@ jobs:
     
     steps:
       - name: download
-        run: wget "https://cangjie-lang.cn/v1/files/auth/downLoad?nsId=142267&fileName=Cangjie-0.53.13-linux_x64.tar.gz&objectKey=6719f1eb3af6947e3c6af327" -q -O Cangjie-0.53.13-linux_x64.tar.gz && tar -xzf Cangjie-0.53.13-linux_x64.tar.gz
+        run: wget "https://cangjie-lang.cn/v1/files/auth/downLoad?nsId=142267&fileName=cangjie-sdk-linux-x64-1.1.3.tar.gz&objectKey=6a19349d21f5a8178d6fd22b" -q -O cangjie-sdk-linux-x64-1.1.3.tar.gz && tar -xzf cangjie-sdk-linux-x64-1.1.3.tar.gz
       - name: cjc
-        run:  . cangjie/envsetup.sh && cjc --version
+        run:  source cangjie/envsetup.sh && cjc --version
