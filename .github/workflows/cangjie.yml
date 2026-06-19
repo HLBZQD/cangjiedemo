@@ -1,0 +1,13 @@
+name: cangjie
+
+jobs:
+
+  cjc:
+  
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - name: download
+        run: wget "https://cangjie-lang.cn/download/cangjie-1.0.1-linux.tar.gz" -q -O cangjie-1.0.1-linux.tar.gz && tar -xzf cangjie-1.0.1-linux.tar.gz
+      - name: cjc
+        run:  . cangjie/envsetup.sh && cjc --version
